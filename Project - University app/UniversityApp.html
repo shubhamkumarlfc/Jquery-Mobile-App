@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- CSS -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="UniversityAppStyleSheet.css">
+	<!-- JQ -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
+	<script>
+    //for bypassing the chrome error
+    $(document).bind('mobileinit', function () {
+        $.mobile.pushStateEnabled = false;
+    });
+	</script>
+	<!-- JQM -->
+	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	<!-- Bootstrap --> 
+	<!-- Latest compiled JavaScript -->
+	<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
+
+	<!-- User Javascript -->
+    <script type="text/javascript"  src="UniversityAppScript.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+<div data-role="page" id="pageNewRecordForm">
+    <div data-role="header">
+    <h1>University Database</h1>
+    </div>
+    <div data-role="content">
+       <form> 
+			<div> 
+				<label for="name">Name: </label>
+				<div >
+					<input type="text" name="name" data-mini="false" id="name" value="">
+				</div> 
+			</div> 
+		 <label for="address">Address: </label>
+         <div >
+                     
+            <input type="text" name="address"
+            data-mini="false" id="address" value="">
+          </div>
+		   <label for="phone">Phone : </label>
+          <div >
+           
+            <input type="text" name="phone"
+            data-mini="false" id="phone" value="">
+          </div>
+		  <br>
+		  <br>
+		 
+		<div class="form-row">
+        <button class="ui-btn " data-theme="e" id="save_button"onclick ="save_university()">Save</button></div>
+		<div><button class="ui-btn " data-theme="a" id="delete_button"onclick ="delete_university()">Delete</button></div>
+		<br>
+		<br>
+			<div> 
+					<label for="searchKey">Search: </label>
+					<div >
+						<input type="text" name="searchKey" data-mini="false" id="searchKey" value="">
+					</div> 
+			</div> 
+			<br>
+			<div class="form-row">
+			<button class="ui-btn " data-theme="b" id="search_button" onclick ="search_universities()">Search</button></div>
+			<button class="ui-btn " data-theme="c" id="display_button" onclick ="display_universities()">Display Records</button></div>
+			<table id="data" >
+			
+			</table>
+	  </form>
+	</div>
+	<div data-role="footer" data-id="persistent" data-position="fixed">
+			<h1>University app. Developed by Shubham</h1>
+		</div>
+  </div>
+
+</body>
+</html>

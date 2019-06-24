@@ -1,0 +1,11 @@
+#data{
+	border:3px solid black;
+	    position: relative;
+    margin: 0px 18px 18px;
+}
+#data td, #data th {
+  border: 1px solid black;
+}
+#data tr:first-child td {
+    font-weight: bold!important;
+}
