@@ -1,0 +1,6 @@
+#data{
+	border:1px solid black;
+}
+#data td, #data th {
+  border: 1px solid black;
+}
